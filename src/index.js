@@ -6,10 +6,12 @@ import { getCountries} from './actions/actions-countries';
 import DevTools from './DevTools';
 
 render(
-    <Provider store={store}>
-        <h1>Inicjalizacja projektu</h1>
-        <DevTools />
-    </Provider>,
+	<div>
+		<h1>Inicjalizacja projektu</h1>
+    	<Provider store={store}>
+        	<DevTools />
+    	</Provider>
+    </div>,
     document.getElementById('root')
 );
 
