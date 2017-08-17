@@ -4,12 +4,18 @@ import {Provider} from 'react-redux';
 import store from './store/store';
 import { getCountries} from './actions/actions-countries';
 import DevTools from './DevTools';
+import { Router, hashHistory } from 'react-router';
+import routes from './routes';
 
 render(
 	<div>
-		<h1>Inicjalizacja projektu</h1>
     	<Provider store={store}>
+        	<div>
         	<DevTools />
+        		<Router history={hashHistory} routes={routes}>
+            		
+        		</Router>
+        	</div>	
     	</Provider>
     </div>,
     document.getElementById('root')
