@@ -12,9 +12,7 @@ render(
     	<Provider store={store}>
         	<div>
         	<DevTools />
-        		<Router history={hashHistory} routes={routes}>
-            		
-        		</Router>
+        		<Router history={hashHistory} routes={routes}/>
         	</div>	
     	</Provider>
     </div>,
