@@ -7,7 +7,7 @@ import '../country.css';
 
 class ContinentsContainer extends Component {
 	constructor(props) {
-		super(props)
+		super(props);
 	}
 
 	chooseContinent(event) {
@@ -25,11 +25,11 @@ class ContinentsContainer extends Component {
 	render() {
 		return(
 			<div>
-				<select onChange={this.chooseContinent}>
+				<select onChange={e => this.chooseContinent(e)}>
 					<option value="Europa">Europa</option>
 					<option value="Afryka">Afryka</option>
 				</select>
-				<CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry} />
+				<CountryFlagList countries={this.props.visibleCountries} deleteCountry={e => this.deleteCountry(e)} />
 			</div>
 		)
 	}
@@ -37,7 +37,7 @@ class ContinentsContainer extends Component {
 
 const mapStateToProps = function (store) {
 	return {
-		visibleCountries: store.countryReducer.visibleCountries
+		visibleCountries: store.countriesReducer.visibleCountries
 	};
 };
 
